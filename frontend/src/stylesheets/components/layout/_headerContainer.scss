@@ -11,7 +11,7 @@
     .logo {
 
       @extend .p-8;
-      @include setLogoFont(18px);
+      @include setLogoFont(28px);
       line-height: 1;
 
     }

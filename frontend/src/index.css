@@ -39,7 +39,7 @@ input::-ms-clear {
   position: relative;
 }
 
-.absolute, #modal-container, .input-btn, #alert-zeta .alert-progress-bg, #alert-zeta, .spinner .spinner-background .spinner-ball, .form-control .icon-input .input-icon, #menu-container {
+.absolute, .input-btn, #alert-zeta .alert-progress-bg, #alert-zeta, .spinner .spinner-background .spinner-ball, .form-control .icon-input .input-icon, #modal-container, #menu-container {
   position: absolute;
 }
 
@@ -47,7 +47,7 @@ input::-ms-clear {
   width: 100%;
 }
 
-.wrapper, #modal-container .modal-wrapper, #main-container .main-wrapper, #header-container #main-nav {
+.wrapper, #main-container .main-wrapper, #modal-container .modal-wrapper, #header-container #main-nav {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -405,7 +405,7 @@ input::-ms-clear {
        column-gap: 256px;
 }
 
-.h-100, #modal-container .modal-wrapper, .input-btn, #alert-zeta .alert-progress-bg .alert-progress-bar, #main-container, #menu-container #menu-nav, .page-not-found-page .main-wrapper, .about-page .main-wrapper, .home-page .main-wrapper {
+.h-100, .input-btn, #alert-zeta .alert-progress-bg .alert-progress-bar, #main-container, #modal-container .modal-wrapper, #menu-container #menu-nav, .page-not-found-page .main-wrapper, .about-page .main-wrapper, .home-page .main-wrapper {
   height: 100%;
 }
 
@@ -739,7 +739,7 @@ input::-ms-clear {
   padding-bottom: 6px;
 }
 
-.p-8, #modal-container .modal-wrapper, .tags .tag.md, #alert-zeta .alert-btn, #header-container #main-nav .main-nav-list .main-nav-item, #header-container #main-nav .logo, #header-container #main-nav, a.nav-link {
+.p-8, .tags .tag.md, #alert-zeta .alert-btn, #modal-container .modal-wrapper, #header-container #main-nav .main-nav-list .main-nav-item, #header-container #main-nav .logo, #header-container #main-nav, a.nav-link {
   padding: 8px;
 }
 
@@ -1277,7 +1277,7 @@ input::-ms-clear {
   border-radius: 6px;
 }
 
-.br-8, #modal-container .modal-wrapper, .btn.md, #menu-container #menu-nav button, #menu-container #menu-nav .menu-nav-list .menu-nav-item, .about-page .main-wrapper, .home-page .main-wrapper {
+.br-8, .btn.md, #modal-container .modal-wrapper, #menu-container #menu-nav button, #menu-container #menu-nav .menu-nav-list .menu-nav-item, .about-page .main-wrapper, .home-page .main-wrapper {
   border-radius: 8px;
 }
 
@@ -3075,6 +3075,24 @@ input:invalid {
     font-size: 14.8016px;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .about-page .main-wrapper {
+    background-color: hsl(210, 100%, 4%);
+    color: hsl(210, 0%, 98%);
+  }
+  .about-page .main-wrapper h2, .about-page .main-wrapper h3, .about-page .main-wrapper h4, .about-page .main-wrapper .form-header .form-heading, .form-header .about-page .main-wrapper .form-heading, .about-page .main-wrapper h5, .about-page .main-wrapper h6 {
+    color: hsl(210, 0%, 98%);
+  }
+  .about-page .main-wrapper p, .about-page .main-wrapper .form-header .form-subheading, .form-header .about-page .main-wrapper .form-subheading, .about-page .main-wrapper span, .about-page .main-wrapper label, .about-page .main-wrapper input, .about-page .main-wrapper svg {
+    color: #f0f0f0;
+  }
+  .about-page .main-wrapper input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.24);
+  }
+  .about-page .main-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.24);
+  }
+}
 
 .page-not-found-page .main-wrapper {
   opacity: 0;
@@ -3121,7 +3139,7 @@ input:invalid {
 }
 #header-container #main-nav .logo {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1;
@@ -3357,6 +3375,55 @@ input:invalid {
     color: rgba(255, 255, 255, 0.24);
   }
   #menu-container input::placeholder {
+    color: rgba(255, 255, 255, 0.24);
+  }
+}
+
+#modal-container {
+  top: 56px;
+  left: 0;
+  bottom: 18px;
+  right: 0;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.64);
+  opacity: 0;
+  animation: fade-in 0.96s forwards ease-in-out;
+}
+#modal-container .modal-wrapper {
+  background-color: hsl(210, 0%, 98%);
+  color: hsl(210, 100%, 4%);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  transform: translateY(calc(100% + 16px));
+  animation: appear-up 0.48s forwards ease-out;
+  animation-delay: 0.48s;
+}
+#modal-container .modal-wrapper h2, #modal-container .modal-wrapper h3, #modal-container .modal-wrapper h4, #modal-container .modal-wrapper .form-header .form-heading, .form-header #modal-container .modal-wrapper .form-heading, #modal-container .modal-wrapper h5, #modal-container .modal-wrapper h6 {
+  color: hsl(210, 100%, 4%);
+}
+#modal-container .modal-wrapper p, #modal-container .modal-wrapper .form-header .form-subheading, .form-header #modal-container .modal-wrapper .form-subheading, #modal-container .modal-wrapper span, #modal-container .modal-wrapper label, #modal-container .modal-wrapper input, #modal-container .modal-wrapper svg {
+  color: #001429;
+}
+#modal-container .modal-wrapper input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.48);
+}
+#modal-container .modal-wrapper input::placeholder {
+  color: rgba(0, 0, 0, 0.48);
+}
+@media (prefers-color-scheme: dark) {
+  #modal-container .modal-wrapper {
+    background-color: hsl(210, 100%, 4%);
+    color: hsl(210, 0%, 98%);
+  }
+  #modal-container .modal-wrapper h2, #modal-container .modal-wrapper h3, #modal-container .modal-wrapper h4, #modal-container .modal-wrapper .form-header .form-heading, .form-header #modal-container .modal-wrapper .form-heading, #modal-container .modal-wrapper h5, #modal-container .modal-wrapper h6 {
+    color: hsl(210, 0%, 98%);
+  }
+  #modal-container .modal-wrapper p, #modal-container .modal-wrapper .form-header .form-subheading, .form-header #modal-container .modal-wrapper .form-subheading, #modal-container .modal-wrapper span, #modal-container .modal-wrapper label, #modal-container .modal-wrapper input, #modal-container .modal-wrapper svg {
+    color: #f0f0f0;
+  }
+  #modal-container .modal-wrapper input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.24);
+  }
+  #modal-container .modal-wrapper input::placeholder {
     color: rgba(255, 255, 255, 0.24);
   }
 }
@@ -4249,62 +4316,13 @@ input:invalid {
 #header-container {
   z-index: 5;
 }
-#header-container #main-nav .logo {
-  font-size: 28px;
-}
 
 #menu-container {
   z-index: 4;
 }
 
 #modal-container {
-  top: 56px;
-  left: 0;
-  bottom: 18px;
-  right: 0;
-  padding: 16px;
-  background-color: rgba(0, 0, 0, 0.64);
-  opacity: 0;
   z-index: 3;
-  animation: fade-in 0.96s forwards ease-in-out;
-}
-#modal-container .modal-wrapper {
-  background-color: hsl(210, 0%, 98%);
-  color: hsl(210, 100%, 4%);
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
-  transform: translateY(calc(100% + 16px));
-  animation: appear-up 0.48s forwards ease-out;
-  animation-delay: 0.48s;
-}
-#modal-container .modal-wrapper h2, #modal-container .modal-wrapper h3, #modal-container .modal-wrapper h4, #modal-container .modal-wrapper .form-header .form-heading, .form-header #modal-container .modal-wrapper .form-heading, #modal-container .modal-wrapper h5, #modal-container .modal-wrapper h6 {
-  color: hsl(210, 100%, 4%);
-}
-#modal-container .modal-wrapper p, #modal-container .modal-wrapper .form-header .form-subheading, .form-header #modal-container .modal-wrapper .form-subheading, #modal-container .modal-wrapper span, #modal-container .modal-wrapper label, #modal-container .modal-wrapper input, #modal-container .modal-wrapper svg {
-  color: #001429;
-}
-#modal-container .modal-wrapper input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.48);
-}
-#modal-container .modal-wrapper input::placeholder {
-  color: rgba(0, 0, 0, 0.48);
-}
-@media (prefers-color-scheme: dark) {
-  #modal-container .modal-wrapper {
-    background-color: hsl(210, 100%, 4%);
-    color: hsl(210, 0%, 98%);
-  }
-  #modal-container .modal-wrapper h2, #modal-container .modal-wrapper h3, #modal-container .modal-wrapper h4, #modal-container .modal-wrapper .form-header .form-heading, .form-header #modal-container .modal-wrapper .form-heading, #modal-container .modal-wrapper h5, #modal-container .modal-wrapper h6 {
-    color: hsl(210, 0%, 98%);
-  }
-  #modal-container .modal-wrapper p, #modal-container .modal-wrapper .form-header .form-subheading, .form-header #modal-container .modal-wrapper .form-subheading, #modal-container .modal-wrapper span, #modal-container .modal-wrapper label, #modal-container .modal-wrapper input, #modal-container .modal-wrapper svg {
-    color: #f0f0f0;
-  }
-  #modal-container .modal-wrapper input::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.24);
-  }
-  #modal-container .modal-wrapper input::placeholder {
-    color: rgba(255, 255, 255, 0.24);
-  }
 }
 
 #main-container {
