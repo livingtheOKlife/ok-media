@@ -1,0 +1,63 @@
+.about-page {
+
+  @extend .p-24;
+
+  .main-wrapper {
+
+    @extend .flex, .flex-col, .justify-center, .align-center, .gap-32, .h-100, .p-32, .br-8;
+    @include setBackgroundColor($light);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    opacity: 0;
+    animation: fade-in 0.32s forwards ease-in-out;
+    animation-delay: 0.16s;
+
+    * {
+
+      opacity: 0;
+      animation: fade-in 0.64s forwards ease-in-out;
+      animation-delay: 0.64s;
+
+    }
+
+    header {
+
+      @extend .flex, .flex-col, .justify-center, .align-center;
+
+      .brand {
+
+        @extend .ml-64;
+        @include setBrandFont(10px);
+        margin-top: -12px;
+
+      }
+      
+      .logo {
+        
+        font-size: 36px;
+        
+      }
+      
+    }
+    
+    main {
+      
+      @extend .flex, .flex-col, .justify-center, .align-center, .gap-4;
+      
+      h5 {
+
+        @extend .mb-8;
+
+      }
+
+      span {
+
+        @extend .packet, .ta-center;
+        @include setBodyFont(11px);
+
+      }
+
+    }
+
+  }
+
+}

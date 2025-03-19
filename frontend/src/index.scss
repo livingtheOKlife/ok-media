@@ -5,14 +5,68 @@
 @import './stylesheets/components';
 @import './stylesheets/elements';
 
-#main-container {
+#header-container {
 
-  @extend .flex, .px-24;
+  z-index: 5;
 
-  .main-wrapper {
+  #main-nav {
 
-    @extend .h-100;
+    .logo {
+
+      font-size: 28px;
+    
+    }
+    
+  }
+  
+}
+
+#menu-container {
+
+  z-index: 4;
+
+}
+
+#modal-container {
+
+  @extend .absolute, .overflow-hidden;
+  top: 56px;
+  left: 0;
+  bottom: 18px;
+  right: 0;
+  padding: 16px;
+  background-color: rgb(0, 0, 0, 0.64);
+  opacity: 0;
+  z-index: 3;
+  animation: fade-in 0.96s forwards ease-in-out;
+
+  .modal-wrapper {
+
+    @extend .wrapper, .h-100, .p-8, .br-8;
+    @include setBackgroundColor($light);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    transform: translateY(calc(100% + 16px));
+    animation: appear-up 0.48s forwards ease-out;
+    animation-delay: 0.48s;
+
+    @media (prefers-color-scheme: dark) {
+
+      @include setBackgroundColor($dark);
+      
+    }
 
   }
 
+}
+
+#main-container {
+  
+  z-index: 1;
+
+}
+
+#footer-container {
+
+  z-index: 5;
+  
 }

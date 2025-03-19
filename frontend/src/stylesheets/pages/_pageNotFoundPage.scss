@@ -1,0 +1,38 @@
+.page-not-found-page {
+
+  .main-wrapper {
+
+    @extend .flex, .flex-col, .justify-center, .align-center, .h-100, .gap-48;
+    opacity: 0;
+    animation: fade-in 0.64s forwards ease-in-out;
+    animation-delay: 0.32s;
+    
+    *:not(a) {
+      
+      text-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      
+    }
+    
+    main {
+      
+      @extend .flex, .flex-col, .justify-center, .align-center, .gap-8;
+
+      span {
+
+        @include setMenuFont(12px);
+        font-weight: 400;
+        text-transform: none;
+
+        &:hover {
+
+          font-weight: 400;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

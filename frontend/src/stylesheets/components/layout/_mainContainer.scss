@@ -1,6 +1,7 @@
 #main-container {
 
   @extend .container, .h-100, .y-scroll;
+  @include setBackgroundColor(darken($light, 12%));
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -14,6 +15,12 @@
 
     @extend .wrapper;
 
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    @include setBackgroundColor(lighten($dark, 2%));
+    
   }
 
 }

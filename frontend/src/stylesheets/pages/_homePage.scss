@@ -1,0 +1,120 @@
+.home-page {
+
+  @extend .p-24;
+
+  .main-wrapper {
+
+    @extend .flex, .flex-col, .justify-center, .align-center, .gap-32, .h-100, .p-32, .br-8;
+    @include setBackgroundColor($light);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    opacity: 0;
+    animation: fade-in 0.32s forwards ease-in-out;
+    animation-delay: 0.16s;
+
+    * {
+
+      opacity: 0;
+      animation: fade-in 0.64s forwards ease-in-out;
+      animation-delay: 0.64s;
+
+    }
+
+    header {
+
+      @extend .flex, .flex-col, .justify-center, .align-center;
+
+      .brand {
+
+        @extend .ml-64;
+        @include setBrandFont(10px);
+        margin-top: -12px;
+
+      }
+      
+      .logo {
+        
+        font-size: 36px;
+        
+      }
+      
+    }
+    
+    main {
+      
+      @extend .flex, .flex-col, .justify-center, .align-center, .gap-4;
+
+      span {
+
+        @extend .packet, .ta-center;
+        @include setBodyFont(11px);
+
+        .logo {
+
+          @include setLogoFont(11px);
+          font-weight: 900;
+          
+          em {
+            
+            margin-right: 0;
+            font-weight: 900;
+            letter-spacing: -1px;
+
+          }
+
+        }
+
+      }
+
+    }
+    
+    .home-nav {
+
+      @extend .mt-16;
+
+      ul {
+
+        @extend .flex, .flex-col, .justify-center, .align-center, .gap-24;
+
+        li {
+
+          @extend .flex, .flex-wrap, .justify-center, .align-center, .gap-8;
+
+          span {
+
+            @include setBodyFont(12px);
+
+          }
+
+          a {
+
+            text-transform: lowercase;
+
+            &::first-letter {
+
+              text-transform: uppercase;
+
+            }
+
+          }
+
+          &:last-of-type {
+
+            @extend .flex-col, .justify-center, .gap-24, .mt-24;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    @media (prefers-color-scheme: dark) {
+      
+      @include setBackgroundColor($dark);
+      
+    }
+
+  }
+
+}

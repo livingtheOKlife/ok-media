@@ -1,10 +1,10 @@
 p {
 
-  @include setBodyFont(12px);
+  @include setBodyFont(11px);
   
   a {
     
-    @include setBodyFont(12px);
+    @include setBodyFont(11px);
     text-transform: none;
     
     * {
